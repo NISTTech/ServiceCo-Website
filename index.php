@@ -19,13 +19,15 @@
             <section id="featured-products">
                 <h2>Featured Products</h2>
                 <div id="product-list">
-                    <!-- Products will be listed here -->
+                    <h2>Our Products</h2>
+                    <p>Placeholder for products of the website</p>
                 </div>
             </section>
             <section id="service-groups">
                 <h2>Service Groups</h2>
                 <div id="groups-list">
-                    <!-- Service groups will be listed here -->
+                    <h2>Service Groups</h2>
+                    <p>Placeholder for service groups list</p>
                 </div>
             </section>
         </main>
