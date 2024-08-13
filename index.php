@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./logo.png">
         <title>ServiceCo</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
-            <img src="logo.png" alt="ServiceCo Logo">
-            <h1>Welcome to ServiceCo</h1>
+        <a href="http://localhost/ServiceCo/"><img src="logo.png" alt="ServiceCo Logo"></a>
+        <h1>Welcome to ServiceCo</h1>
         </header>
         <main>
             <section id="goals">
