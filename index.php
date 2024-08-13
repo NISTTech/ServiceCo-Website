@@ -16,17 +16,9 @@
                 <h2>Our Goals</h2>
                 <p>Placeholder for goals of the website</p>
             </section>
-            <section id="featured-products">
-                <h2>Featured Products</h2>
-                <div id="product-list">
-                    <h2>Our Products</h2>
-                    <p>Placeholder for products of the website</p>
-                </div>
-            </section>
             <section id="service-groups">
                 <h2>Service Groups</h2>
                 <div id="groups-list">
-                    <h2>Service Groups</h2>
                     <p>Placeholder for service groups list</p>
                 </div>
             </section>
