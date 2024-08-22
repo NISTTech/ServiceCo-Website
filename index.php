@@ -9,8 +9,8 @@
     </head>
     <body>
         <header>
-        <a href="http://localhost/ServiceCo/"><img src="logo.png" alt="ServiceCo Logo"></a>
-        <h1>Welcome to ServiceCo</h1>
+            <a href="http://localhost/ServiceCo/"><img src="logo.png" alt="ServiceCo Logo"></a>
+            <h1>Welcome to ServiceCo</h1>
         </header>
         <main>
             <section id="goals">
@@ -21,6 +21,11 @@
                 <h2>Service Groups</h2>
                 <div id="groups-list">
                     <p>Placeholder for service groups list</p>
+                </div>
+                <div class="logo-wall">
+                    <a href="./servicegroups/anglewishes/index.php"><img src="./servicegroups/anglewishes/logo.png" alt="anglewishes Logo"></a>
+                    <a href="./servicegroups/arc/index.php"><img src="./servicegroups/arc/logo.png" alt="arc Logo"></a>
+                    <a href="./servicegroups/baansaijai/index.php"><img src="./servicegroups/baansaijai/logo.png" alt="baansaijai Logo"></a>
                 </div>
             </section>
         </main>
