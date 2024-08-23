@@ -19,9 +19,6 @@
             </section>
             <section id="service-groups">
                 <h2>Service Groups</h2>
-                <div id="groups-list">
-                    <p>Placeholder for service groups list</p>
-                </div>
                 <div class="logo-wall">
                     <a href="./servicegroups/anglewishes/index.php"><img src="./servicegroups/anglewishes/logo.png" alt="anglewishes Logo"></a>
                     <a href="./servicegroups/arc/index.php"><img src="./servicegroups/arc/logo.png" alt="arc Logo"></a>

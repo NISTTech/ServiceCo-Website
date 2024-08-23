@@ -32,16 +32,9 @@ h2 {
     padding-bottom: 0.5em;
 }
 
-#goals, #featured-products, #service-groups {
+#goals , #service-groups {
     margin-bottom: 2em;
 }
-
-#product-list, #groups-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-}
-
 
 .logo-wall {
     display: grid;
