@@ -15,7 +15,7 @@
         <main>
             <section id="goals">
                 <h2>Our Goals</h2>
-                <p>Placeholder for goals of the website</p>
+                <p>An overview of sustainable and service products with their pricing and contact details supporting and strengthening our community partnership.</p>
             </section>
             <section id="service-groups">
                 <h2>Service Groups</h2>
