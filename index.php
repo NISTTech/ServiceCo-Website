@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            <a href="http://localhost/ServiceCo/"><img src="logo.png" alt="ServiceCo Logo"></a>
+            <a href="http://localhost/ServiceCo/"><img src="./logo.png" alt="serviceco Logo"></a>
             <h1>Welcome to ServiceCo</h1>
         </header>
         <main>
