@@ -1,3 +1,3 @@
 Readme ServiceCo
 ===
-This is the complete ServiceCo website draft, buile with php, html, based on XMAPP.
+This is the complete ServiceCo website, built with php, html and css.
