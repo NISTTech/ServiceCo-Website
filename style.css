@@ -6,8 +6,7 @@ body {
 }
 
 header {
-    background-color: #0056b3;
-    color: white;
+    background-color: #9077B1;
     padding: 1em 0;
     text-align: center;
 }
@@ -37,7 +36,7 @@ h1, h2 {
 }
 
 h2 {
-    border-bottom: 2px solid #0056b3;
+    border-bottom: 2px solid #9077B1;
     padding-bottom: 0.5em;
 }
 
