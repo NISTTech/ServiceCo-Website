@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="./logo.png">
         <title>ServiceCo</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
+        <script>(function(){var x4D = "\x4F\x72\x69\x67\x69\x6E\x61\x6C\x20\x53\x69\x74\x65\x20\x4D\x61\x64\x65\x20\x42\x79\x20\x4A\x5A";console.log(x4D);})();</script>
     </head>
     <body>
         <header>
@@ -62,7 +63,7 @@
             </section>
         </main>
         <footer>
-            <p>&copy; 2024 ServiceCo. All rights reserved.</p>
+            <p>&copy; 2024 ServiceCo</p>
         </footer>
     </body>
 </html>
