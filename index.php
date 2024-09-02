@@ -6,12 +6,13 @@
         <link rel="icon" type="image/x-icon" href="./logo.png">
         <title>ServiceCo</title>
         <link rel="stylesheet" href="./style.css">
-        <script>(function(){var x4D = "\x4F\x72\x69\x67\x69\x6E\x61\x6C\x20\x53\x69\x74\x65\x20\x4D\x61\x64\x65\x20\x42\x79\x20\x4A\x5A";console.log(x4D);})();</script>
+        <script>var x4D = "\x4F\x72\x69\x67\x69\x6E\x61\x6C\x20\x53\x69\x74\x65\x20\x4D\x61\x64\x65\x20\x42\x79\x20\x4A\x5A";</script>
     </head>
     <body>
         <header>
             <a href="http://localhost/ServiceCo/"><img src="./logo.png" alt="serviceco Logo"></a>
             <h1>Welcome to ServiceCo</h1>
+             <!--Search Box Here-->
         </header>
         <main>
             <section id="goals">
