@@ -64,7 +64,7 @@
             </section>
         </main>
         <footer>
-            <p>&copy; 2024 ServiceCo</p>
+            <p>2024 ServiceCo</p>
         </footer>
     </body>
 </html>
