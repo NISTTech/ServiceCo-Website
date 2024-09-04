@@ -1,8 +1,8 @@
 CREATE TABLE service_groups (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    slug VARCHAR(255) NOT NULL,
-    logo VARCHAR(255) NOT NULL
+    logo VARCHAR(255) NOT NULL,
+    site_section VARCHAR(255) NOT NULL
 );
 
 -- create products table
@@ -16,47 +16,48 @@ CREATE TABLE products (
     FOREIGN KEY (service_group_id) REFERENCES service_groups(id) ON DELETE CASCADE
 );
 
--- 5. Insert data into the service_groups table
-INSERT INTO service_groups (name, slug, logo) VALUES
-('Anglewishes', 'anglewishes', 'anglewishes/logo.png'),
-('Arc', 'arc', 'arc/logo.png'),
-('Baansaijai', 'baansaijai', 'baansaijai/logo.png'),
-('Beatasone', 'beatasone', 'beatasone/logo.png'),
-('Catnist', 'catnist', 'catnist/logo.png'),
-('Cof', 'cof', 'cof/logo.png'),
-('Connecting Communities', 'connectingcommunities', 'connectingcommunities/logo.png'),
-('Cured', 'cured', 'cured/logo.png'),
-('Eco', 'eco', 'eco/logo.png'),
-('Edibubble', 'edibubble', 'edibubble/logo.png'),
-('Fairnist', 'fairnist', 'fairnist/logo.png'),
-('Farmers Market', 'farmersmarket', 'farmersmarket/logo.png'),
-('Fashionist', 'fashionist', 'fashionist/logo.png'),
-('Feminist', 'feminist', 'feminist/logo.png'),
-('Forest Rangers', 'forestrangers', 'forestrangers/logo.png'),
-('Free to Be', 'freetobe', 'freetobe/logo.png'),
-('Friends of the Immanuel Orchestra', 'friendsoftheimmanuleorchestra', 'friendsoftheimmanuleorchestra/logo.png'),
-('Greenlight', 'greenlight', 'greenlight/logo.png'),
-('Helping Hearts', 'helpinghearts', 'helpinghearts/logo.png'),
-('Mushie Mushie', 'mushiemushie', 'mushiemushie/logo.png'),
-('Nest', 'nest', 'nest/logo.png'),
-('Nistcha', 'nistcha', 'nistcha/logo.png'),
-('Nist Community Market', 'nistcomunitymarket', 'nistcomunitymarket/logo.png'),
-('Nist Tech', 'nisttech', 'nisttech/logo.png'),
-('Operation Smile', 'operationsmile', 'operationsmile/logo.png'),
-('PFN', 'pfn', 'pfn/logo.png'),
-('Phuliphay', 'phuliphay', 'phuliphay/logo.png'),
-('Priceless', 'priceless', 'priceless/logo.png'),
-('Rescued Glass', 'rescuedglass', 'rescuedglass/logo.png'),
-('Revive', 'revive', 'revive/logo.png'),
-('Rooftop Garden', 'rooftopgarden', 'rooftopgarden/logo.png'),
-('Soap', 'soap', 'soap/logo.png'),
-('Step Up', 'stepup', 'stepup/logo.png'),
-('The Falconer', 'thefalconer', 'thefalconer/logo.png'),
-('Tusk', 'tusk', 'tusk/logo.png'),
-('Wellnist', 'wellnist', 'wellnist/logo.png'),
-('Wish Together', 'wishtogether', 'wishtogether/logo.png'),
-('Woof', 'woof', 'woof/logo.png');
+-- insert data into the service_groups table
+INSERT INTO service_groups (name, logo, site_section) VALUES
+('anglewishes', 'serviceco/servicegroups/anglewishes/logo.png', 'serviceco/servicegroups/anglewishes/index.php'),
+('arc', 'serviceco/servicegroups/arc/logo.png', 'serviceco/servicegroups/arc/index.php'),
+('baansaijai', 'serviceco/servicegroups/baansaijai/logo.png', 'serviceco/servicegroups/baansaijai/index.php'),
+('beatasone', 'serviceco/servicegroups/beatasone/logo.png', 'serviceco/servicegroups/beatasone/index.php'),
+('catnist', 'serviceco/servicegroups/catnist/logo.png', 'serviceco/servicegroups/catnist/index.php'),
+('cof', 'serviceco/servicegroups/cof/logo.png', 'serviceco/servicegroups/cof/index.php'),
+('connecting communities', 'serviceco/servicegroups/connectingcommunities/logo.png', 'serviceco/servicegroups/connectingcommunities/index.php'),
+('cured', 'serviceco/servicegroups/cured/logo.png', 'serviceco/servicegroups/cured/index.php'),
+('eco', 'serviceco/servicegroups/eco/logo.png', 'serviceco/servicegroups/eco/index.php'),
+('edibubble', 'serviceco/servicegroups/edibubble/logo.png', 'serviceco/servicegroups/edibubble/index.php'),
+('fairnist', 'serviceco/servicegroups/fairnist/logo.png', 'serviceco/servicegroups/fairnist/index.php'),
+('farmers market', 'serviceco/servicegroups/farmersmarket/logo.png', 'serviceco/servicegroups/farmersmarket/index.php'),
+('fashionist', 'serviceco/servicegroups/fashionist/logo.png', 'serviceco/servicegroups/fashionist/index.php'),
+('feminist', 'serviceco/servicegroups/feminist/logo.png', 'serviceco/servicegroups/feminist/index.php'),
+('forest rangers', 'serviceco/servicegroups/forestrangers/logo.png', 'serviceco/servicegroups/forestrangers/index.php'),
+('free to be', 'serviceco/servicegroups/freetobe/logo.png', 'serviceco/servicegroups/freetobe/index.php'),
+('friends of the immanuel orchestra', 'serviceco/servicegroups/friendsoftheimmanuleorchestra/logo.png', 'serviceco/servicegroups/friendsoftheimmanuleorchestra/index.php'),
+('greenlight', 'serviceco/servicegroups/greenlight/logo.png', 'serviceco/servicegroups/greenlight/index.php'),
+('helping hearts', 'serviceco/servicegroups/helpinghearts/logo.png', 'serviceco/servicegroups/helpinghearts/index.php'),
+('mushie mushie', 'serviceco/servicegroups/mushiemushie/logo.png', 'serviceco/servicegroups/mushiemushie/index.php'),
+('nest', 'serviceco/servicegroups/nest/logo.png', 'serviceco/servicegroups/nest/index.php'),
+('nistcha', 'serviceco/servicegroups/nistcha/logo.png', 'serviceco/servicegroups/nistcha/index.php'),
+('nist community market', 'serviceco/servicegroups/nistcomunitymarket/logo.png', 'serviceco/servicegroups/nistcomunitymarket/index.php'),
+('nist tech', 'serviceco/servicegroups/nisttech/logo.png', 'serviceco/servicegroups/nisttech/index.php'),
+('operation smile', 'serviceco/servicegroups/operationsmile/logo.png', 'serviceco/servicegroups/operationsmile/index.php'),
+('pfn', 'serviceco/servicegroups/pfn/logo.png', 'serviceco/servicegroups/pfn/index.php'),
+('phuliphay', 'serviceco/servicegroups/phuliphay/logo.png', 'serviceco/servicegroups/phuliphay/index.php'),
+('priceless', 'serviceco/servicegroups/priceless/logo.png', 'serviceco/servicegroups/priceless/index.php'),
+('rescued glass', 'serviceco/servicegroups/rescuedglass/logo.png', 'serviceco/servicegroups/rescuedglass/index.php'),
+('revive', 'serviceco/servicegroups/revive/logo.png', 'serviceco/servicegroups/revive/index.php'),
+('rooftop garden', 'serviceco/servicegroups/rooftopgarden/logo.png', 'serviceco/servicegroups/rooftopgarden/index.php'),
+('soap', 'serviceco/servicegroups/soap/logo.png', 'serviceco/servicegroups/soap/index.php'),
+('step up', 'serviceco/servicegroups/stepup/logo.png', 'serviceco/servicegroups/stepup/index.php'),
+('the falconer', 'serviceco/servicegroups/thefalconer/logo.png', 'serviceco/servicegroups/thefalconer/index.php'),
+('tusk', 'serviceco/servicegroups/tusk/logo.png', 'serviceco/servicegroups/tusk/index.php'),
+('wellnist', 'serviceco/servicegroups/wellnist/logo.png', 'serviceco/servicegroups/wellnist/index.php'),
+('wish together', 'serviceco/servicegroups/wishtogether/logo.png', 'serviceco/servicegroups/wishtogether/index.php'),
+('woof', 'serviceco/servicegroups/woof/logo.png', 'serviceco/servicegroups/woof/index.php');
 
--- Insert data into the products table
+-- insert data into the products table
 INSERT INTO products (service_group_id, name, description, price, image) VALUES
--- (1, 'Angel Bracelet', 'Handmade bracelet crafted with care and love.', 19.99, 'anglewishes/angel_bracelet.png'),
+-- examples (Replace with real products and prices.) 
+(1, 'Angel Bracelet', 'Handmade bracelet crafted with care and love.', 19.99, 'anglewishes/products/angel_bracelet.png'),
