@@ -33,7 +33,6 @@
                     <a href="./servicegroups/eco/index.php"><img src="./servicegroups/eco/logo.png" alt="eco Logo"></a>
                     <a href="./servicegroups/edibubble/index.php"><img src="./servicegroups/edibubble/logo.png" alt="edibubble Logo"></a>
                     <a href="./servicegroups/fairnist/index.php"><img src="./servicegroups/fairnist/logo.png" alt="fairnist Logo"></a>
-                    <a href="./servicegroups/farmersmarket/index.php"><img src="./servicegroups/farmersmarket/logo.png" alt="farmersmarket Logo"></a>
                     <a href="./servicegroups/fashionist/index.php"><img src="./servicegroups/fashionist/logo.png" alt="fashionist Logo"></a>
                     <a href="./servicegroups/feminist/index.php"><img src="./servicegroups/feminist/logo.png" alt="feminist Logo"></a>
                     <a href="./servicegroups/forestrangers/index.php"><img src="./servicegroups/forestrangers/logo.png" alt="forestrangers Logo"></a>
@@ -54,7 +53,6 @@
                     <a href="./servicegroups/revive/index.php"><img src="./servicegroups/revive/logo.png" alt="revive Logo"></a>
                     <a href="./servicegroups/rooftopgarden/index.php"><img src="./servicegroups/rooftopgarden/logo.png" alt="rooftopgarden Logo"></a>
                     <a href="./servicegroups/soap/index.php"><img src="./servicegroups/soap/logo.png" alt="soap Logo"></a>
-                    <a href="./servicegroups/stepup/index.php"><img src="./servicegroups/stepup/logo.png" alt="stepup Logo"></a>
                     <a href="./servicegroups/thefalconer/index.php"><img src="./servicegroups/thefalconer/logo.png" alt="thefalconer Logo"></a>
                     <a href="./servicegroups/tusk/index.php"><img src="./servicegroups/tusk/logo.png" alt="tusk Logo"></a>
                     <a href="./servicegroups/wellnist/index.php"><img src="./servicegroups/wellnist/logo.png" alt="wellnist Logo"></a>
