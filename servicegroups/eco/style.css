@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #C2593A;
+    background-color: #769f57;
     padding: 1em 0;
     text-align: center;
 }
@@ -36,7 +36,7 @@ h1, h2 {
 }
 
 h2 {
-    border-bottom: 2px solid #C2593A;
+    border-bottom: 2px solid #769f57;
     padding-bottom: 0.5em;
 }
 
@@ -71,7 +71,7 @@ h2 {
     display: inline-block;
     margin-top: 1em;
     padding: 10px 20px;
-    background-color: #C2593A;
+    background-color: #769f57;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
