@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="./logo.png">
-        <title>AngleWishes</title>
+        <title>Angle Wishes</title>
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
@@ -24,7 +24,7 @@
             </section>
         </main>
         <footer>
-            <p>&copy; 2024 AngleWishes</p>
+            <p>Angle Wishes</p>
         </footer>
     </body>
 </html>
