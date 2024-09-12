@@ -7,7 +7,7 @@ CREATE TABLE service_groups (
     description TEXT
 );
 
--- Create products table
+-- create products table
 CREATE TABLE products (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     service_group_id INT(11) NOT NULL,
@@ -57,8 +57,7 @@ INSERT INTO service_groups (name, logo, url, description) VALUES
 ('wish together', 'http://localhost/serviceco/servicegroups/wishtogether/logo.png', 'http://localhost/serviceco/servicegroups/wishtogether/index.php', 'We aim to partner with schools in rural regions of Thailand and support them with materials that contribute to renovating/improving the learning environment. This will create a comfortable learning environment for all students to flourish. One school at a time.'),
 ('woof', 'http://localhost/serviceco/servicegroups/woof/logo.png', 'http://localhost/serviceco/servicegroups/woof/index.php', 'Welfare Of Our Friends (WOOF) is a service initiative that aims to raise awareness about issues regarding Soi Dogs in Thailand. We work alongside Soi Dog shelters and foundations to improve the livelihood of homeless, neglected and abused dogs in Thailand.');
 
-/* insert data into the products table
+-- insert data into the products table
 INSERT INTO products (service_group_id, name, description, price, image) VALUES
-examples (Replace with real products and prices.) 
-(1, 'Angel Bracelet', 'Handmade bracelet crafted with care and love.', 19.99, 'anglewishes/products/angel_bracelet.png'),
-*/
+-- examples (Replace with real products and prices.) 
+(1, 'Angel Bracelet', 'Handmade bracelet crafted with care and love.', 19.99, 'anglewishes/products/angel_bracelet.png');
