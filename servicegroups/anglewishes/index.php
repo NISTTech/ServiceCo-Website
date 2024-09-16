@@ -1,4 +1,4 @@
 <?php
-$serviceGroup = 'anglewishes';
+$serviceGroup = '';
 include('../template.php');
 ?>
