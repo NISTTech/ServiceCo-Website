@@ -1,4 +1,4 @@
 <?php
-$serviceGroup = '';
+$serviceGroupId = 2;
 include('../template.php');
 ?>
