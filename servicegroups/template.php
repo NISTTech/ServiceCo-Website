@@ -147,7 +147,7 @@ mysqli_close($conn);
         </section>
     </main>
     <footer>
-        <p><?php echo $groupName; ?></p>
+        <p>2024 <?php echo $groupName; ?></p>
     </footer>
 </body>
 </html>
