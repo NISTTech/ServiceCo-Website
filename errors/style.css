@@ -1,0 +1,48 @@
+body {
+    background-color: #001f3f; /* Navy blue background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFD700; /* Yellow text */
+}
+.error-container {
+    text-align: center;
+    background-color: #001f3f; /* Keep container navy blue */
+    padding: 30px 40px;
+    border: 2px solid #FFD700; /* Yellow border */
+    border-radius: 10px;
+}
+.logo {
+    width: 60px;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 50px;
+    color: #FFD700; /* Yellow heading */
+    margin: 0;
+}
+p {
+    font-size: 18px;
+    color: #FFD700; /* Yellow text */
+    margin: 20px 0 20px;
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #001f3f; /* Navy blue text */
+    background-color: #FFD700; /* Yellow background */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.back-button:hover {
+    background-color: #ffcc00; /* Slightly lighter yellow on hover */
+    color: #001f3f; /* Navy blue text on hover */
+}
