@@ -4,61 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ServiceCo - Error 404</title>
-    <link rel="icon" type="image/x-icon" href="../logo.png">
-    <style>
-        body {
-            background-color: #000; /* Black background */
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #fff; /* White text */
-        }
-        .error {
-            text-align: center;
-            background-color: #000; /* Black container background */
-            padding: 30px 40px;
-            border: 2px solid #fff; /* White border */
-            border-radius: 10px;
-        }
-        .logo {
-            width: 60px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 50px;
-            color: #fff; /* White heading */
-            margin: 0;
-        }
-        p {
-            font-size: 18px;
-            color: #fff; /* White text */
-            margin: 20px 0 20px;
-        }
-        .back-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #000; /* Black text */
-            background-color: #fff; /* White background */
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .back-button:hover {
-            background-color: #333; /* Darker background on hover */
-            color: #fff; /* Change text to white on hover */
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="./logo.png">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="error">
-        <img src="../logo.png" alt="ServiceCo Logo" class="logo">
+    <div class="error-container">
+        <img src="./logo.png" alt="ServiceCo Logo" class="logo">
         <h1>Error 404</h1>
         <p>Page Not Found - The page you are looking for does not exist. Please check the URL or return to the previous page.</p>
         <button class="back-button" onclick="history.back()">Go Back</button>
