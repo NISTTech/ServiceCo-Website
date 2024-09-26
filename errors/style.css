@@ -11,7 +11,7 @@ body {
 }
 .error-container {
     text-align: center;
-    background-color: #001f3f; /* Keep container navy blue */
+    background-color: #001f3f; /* Container navy blue */
     padding: 30px 40px;
     border: 2px solid #FFD700; /* Yellow border */
     border-radius: 10px;
