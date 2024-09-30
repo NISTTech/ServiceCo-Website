@@ -61,4 +61,8 @@ INSERT INTO service_groups (name, color, logo, url, description) VALUES
 -- insert data into the products table
 INSERT INTO products (service_group_id, name, description, price, image) VALUES
 -- examples (Replace with real products and prices.) 
-(1, 'Angel Bracelet', 'Handmade bracelet crafted with care and love.', 19.99, 'anglewishes/products/angel_bracelet.png');
+(1, 'Angel Bracelet', 'Handmade bracelet crafted with care and love.', 19.99, 'anglewishes/products/angel_bracelet.png'),
+(2, 'Luxe Candle', 'A luxury scented candle to set the mood.', 29.99, 'luxeproducts/products/luxe_candle.png'),
+(3, 'Fitness Tracker', 'A smart fitness tracker to monitor your health.', 49.99, 'fitgear/products/fitness_tracker.png'),
+(4, 'Reusable Water Bottle', 'An eco-friendly bottle for sustainable hydration.', 14.99, 'ecoessentials/products/reusable_water_bottle.png'),
+(5, 'Wireless Earbuds', 'High-quality wireless earbuds for your daily commute.', 39.99, 'techtrends/products/wireless_earbuds.png');
