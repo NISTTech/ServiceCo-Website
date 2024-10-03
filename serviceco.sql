@@ -19,7 +19,7 @@ CREATE TABLE products (
     image VARCHAR(255),
     FOREIGN KEY (service_group_id) REFERENCES service_groups(id) ON DELETE CASCADE
 );
--- tehrthb
+
 -- insert data into the service_groups table
 INSERT INTO service_groups (name, email, color, logo, url, description) VALUES
 ('Angel Wishes', 'angelwishes@nist.ac.th', '#c2593a', 'http://localhost/serviceco/servicegroups/anglewishes/logo.png', 'http://localhost/serviceco/servicegroups/anglewishes/index.php', 'To raise awareness and promote learning on the realities of cancer and cancer treatment in the NIST community, in addition to providing social, emotional, and financial support to patients diagnosed with cancer and their loved ones, in partnership with Angel Foundation.'),
