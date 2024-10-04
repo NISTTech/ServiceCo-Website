@@ -1,5 +1,5 @@
 body {
-    background-color: #001f3f; /* Navy blue background */
+    background-color: #001f3f;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -7,13 +7,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #FFD700; /* Yellow text */
+    color: #FFD700;
 }
 .error-container {
     text-align: center;
-    background-color: #001f3f; /* Container navy blue */
+    background-color: #001f3f;
     padding: 30px 40px;
-    border: 2px solid #FFD700; /* Yellow border */
+    border: 2px solid #FFD700;
     border-radius: 10px;
 }
 .logo {
@@ -22,20 +22,20 @@ body {
 }
 h1 {
     font-size: 50px;
-    color: #FFD700; /* Yellow heading */
+    color: #FFD700;
     margin: 0;
 }
 p {
     font-size: 18px;
-    color: #FFD700; /* Yellow text */
+    color: #FFD700;
     margin: 20px 0 20px;
 }
 .back-button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: #001f3f; /* Navy blue text */
-    background-color: #FFD700; /* Yellow background */
+    color: #001f3f;
+    background-color: #FFD700;
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -43,6 +43,6 @@ p {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .back-button:hover {
-    background-color: #ffcc00; /* Slightly lighter yellow on hover */
-    color: #001f3f; /* Navy blue text on hover */
+    background-color: #ffcc00;
+    color: #001f3f;
 }
