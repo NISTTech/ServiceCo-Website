@@ -12,7 +12,10 @@
         <header>
             <a href="http://localhost/ServiceCo/"><img src="./logo.png" alt="serviceco Logo"></a>
             <h1>Welcome to ServiceCo</h1>
-             <!--Search Box Here-->
+            <form action="#" method="GET" class="search-form">
+                <input type="text" placeholder="Search in ServiceCo">
+                <button type="submit">Search</button>
+            </form>
         </header>
         <main>
             <section id="goals">
