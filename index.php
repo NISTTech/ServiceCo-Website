@@ -56,7 +56,6 @@
                     <a href="./servicegroups/revive/index.php"><img src="./servicegroups/revive/logo.png" alt="revive Logo"></a>
                     <a href="./servicegroups/rooftopgarden/index.php"><img src="./servicegroups/rooftopgarden/logo.png" alt="rooftopgarden Logo"></a>
                     <a href="./servicegroups/soap/index.php"><img src="./servicegroups/soap/logo.png" alt="soap Logo"></a>
-                    <a href="./servicegroups/thefalconer/index.php"><img src="./servicegroups/thefalconer/logo.png" alt="thefalconer Logo"></a>
                     <a href="./servicegroups/tusk/index.php"><img src="./servicegroups/tusk/logo.png" alt="tusk Logo"></a>
                     <a href="./servicegroups/wellnist/index.php"><img src="./servicegroups/wellnist/logo.png" alt="wellnist Logo"></a>
                     <a href="./servicegroups/wishtogether/index.php"><img src="./servicegroups/wishtogether/logo.png" alt="wishtogether Logo"></a>
