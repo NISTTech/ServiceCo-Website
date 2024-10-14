@@ -23,12 +23,13 @@ $result = mysqli_query($conn, $sql);
 // check if result is returned
 if (mysqli_num_rows($result) > 0) {
     // fetch group data
-    $row = mysqli_fetch_assoc($result);
-    $groupName = $row['name'];
-    $groupEmail = $row['email'];
-    $groupColor = $row['color'];
-    $groupLogo = $row['logo'];
-    $groupDescription = $row['description'];
+    $fetch = mysqli_fetch_assoc($result);
+    $groupName = $fetch['name'];
+    $groupEmail = $fetch['email'];
+    $groupColor = $fetch['color'];
+    $groupLogo = $fetch['logo'];
+    $groupUrl = $fetch['url'];
+    $groupDescription = $fetch['description'];
 } else {
     echo "Service group not found.";
     exit;
@@ -41,7 +42,7 @@ mysqli_close($conn);
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="<?php echo $groupLogo; ?>">
+        <link rel="icon" type="image/x-icon" href="../../logo.png">
         <title><?php echo $groupName; ?></title>
         <style>
             body {
@@ -133,8 +134,9 @@ mysqli_close($conn);
     </head>
     <body>
         <header>
-            <a href="<?php echo $row['url']; ?>"><img src="<?php echo $groupLogo; ?>" alt="<?php echo $groupName; ?> Logo"></a>
+            <a href="<?php echo $groupUrl ?>"><img src="<?php echo $groupLogo; ?>" alt="<?php echo $groupName; ?> Logo"></a>
             <h1>Welcome to <?php echo $groupName; ?></h1>
+            <p><?php echo $groupEmail ?></p>
             <a href="http://localhost/ServiceCo/index.php" class="home-button">Back To ServiceCo</a>
         </header>
         <main>
