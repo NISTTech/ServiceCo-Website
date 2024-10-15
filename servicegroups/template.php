@@ -23,13 +23,13 @@ $result = mysqli_query($conn, $sql);
 // check if result is returned
 if (mysqli_num_rows($result) > 0) {
     // fetch group data
-    $fetch = mysqli_fetch_assoc($result);
-    $groupName = $fetch['name'];
-    $groupEmail = $fetch['email'];
-    $groupColor = $fetch['color'];
-    $groupLogo = $fetch['logo'];
-    $groupUrl = $fetch['url'];
-    $groupDescription = $fetch['description'];
+    $row = mysqli_fetch_assoc($result);
+    $groupName = $row['name'];
+    $groupEmail = $row['email'];
+    $groupColor = $row['color'];
+    $groupLogo = $row['logo'];
+    $groupUrl = $row['url'];
+    $groupDescription = $row['description'];
 } else {
     echo "Service group not found.";
     exit;
@@ -79,7 +79,7 @@ mysqli_close($conn);
             }
 
             h1, h2 {
-                color: #333;
+                color: #000;
             }
 
             h2 {
