@@ -7,15 +7,41 @@
         <title>ServiceCo</title>
         <link rel="stylesheet" href="./style.css">
         <script>var x4D = "\x4F\x72\x69\x67\x69\x6E\x61\x6C\x20\x53\x69\x74\x65\x20\x4D\x61\x64\x65\x20\x42\x79\x20\x4A\x5A";</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
             <a href="http://localhost/ServiceCo/"><img src="./logo.png" alt="serviceco Logo"></a>
             <h1>Welcome to ServiceCo</h1>
             <form action="#" method="GET" class="search-form">
-                <input type="text" placeholder="Search in ServiceCo">
+                <input type="text" id="search-box" placeholder="Search in ServiceCo" autocomplete="off">
                 <button type="submit">Search</button>
             </form>
+            <div id="search-results" class="dropdown-content"></div>
+            <script>
+                $(document).ready(function() {
+                    $('.search-form').submit(function(event) {
+                        event.preventDefault();
+                        var searchTerm = $('#search-box').val().toLowerCase();
+                        
+                        if (searchTerm != '') {
+                            $.get('search.php', { search: searchTerm }, function(response) {
+                                $('#search-results').html(response).show();
+                            }).fail(function() {
+                                $('#search-results').html('<div class="error">There was an error.</div>').show();
+                            });
+                        } else {
+                            $('#search-results').hide();
+                        }
+                    });
+
+                    $(document).click(function(e) {
+                        if (!$(e.target).is('#search-box') && !$(e.target).is('#search-results')) {
+                            $('#search-results').hide();
+                        }
+                    });
+                });
+            </script>
         </header>
         <main>
             <section id="goals">
