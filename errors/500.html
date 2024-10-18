@@ -3,13 +3,62 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../logo.png">
         <title>ServiceCo - Error 500</title>
-        <link rel="icon" type="image/x-icon" href="./logo.png">
-        <link rel="stylesheet" href="./style.css">
+        <style>
+            body {
+                background-color: #001f3f;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #FFD700;
+            }
+            .error-container {
+                text-align: center;
+                background-color: #001f3f;
+                padding: 30px 40px;
+                border: 2px solid #FFD700;
+                border-radius: 10px;
+            }
+            .logo {
+                width: 60px;
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 50px;
+                color: #FFD700;
+                margin: 0;
+            }
+            p {
+                font-size: 18px;
+                color: #FFD700;
+                margin: 20px 0 20px;
+            }
+            .back-button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: #001f3f;
+                background-color: #FFD700;
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+            .back-button:hover {
+                background-color: #ffcc00;
+                color: #001f3f;
+            }
+        </style>
     </head>
     <body>
         <div class="error-container">
-            <img src="./logo.png" alt="ServiceCo Logo" class="logo">
+            <img src="../logo.png" alt="ServiceCo Logo" class="logo">
             <h1>Error 500</h1>
             <p>Internal Server Error - Something went wrong on our end. Please try again later or return to the previous page.</p>
             <button class="back-button" onclick="history.back()">Go Back</button>
