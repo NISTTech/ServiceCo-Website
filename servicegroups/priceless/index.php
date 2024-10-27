@@ -1,4 +1,4 @@
 <?php
 $serviceGroupId = 27;
-include('../template.php');
+include('../h_template.php');
 ?>
