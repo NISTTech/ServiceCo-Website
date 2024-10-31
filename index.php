@@ -23,7 +23,7 @@
                     $('.search-form').submit(function(event) {
                         event.preventDefault();
                         var searchTerm = $('#search-box').val().toLowerCase();
-                        
+
                         if (searchTerm != '') {
                             $.get('search.php', { search: searchTerm }, function(response) {
                                 $('#search-results').html(response).show();

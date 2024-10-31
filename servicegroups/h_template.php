@@ -4,25 +4,23 @@ if (!isset($serviceGroupId)) {
     die("Service group ID not set.");
 }
 
-// DB conn
+// DB connection
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "serviceco";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// check conn
+// check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// fetch details
+// fetch service group details
 $sql = "SELECT * FROM service_groups WHERE id = $serviceGroupId";
 $result = mysqli_query($conn, $sql);
 
-// check if result is returned
 if (mysqli_num_rows($result) > 0) {
-    // fetch group data
     $row = mysqli_fetch_assoc($result);
     $groupName = $row['name'];
     $groupEmail = $row['email'];
@@ -34,6 +32,12 @@ if (mysqli_num_rows($result) > 0) {
     echo "Service group not found.";
     exit;
 }
+
+// fetch products for this service group
+$product_sql = "SELECT * FROM products WHERE service_group_id = $serviceGroupId";
+$product_result = mysqli_query($conn, $product_sql);
+
+// close connection after queries
 mysqli_close($conn);
 ?>
 
@@ -87,7 +91,7 @@ mysqli_close($conn);
                 padding-bottom: 0.5em;
             }
 
-            #goals , #products {
+            #goals, #products {
                 margin-bottom: 2em;
             }
 
@@ -114,7 +118,14 @@ mysqli_close($conn);
                 transform: scale(1.1);
             }
 
-                .home-button {
+            .product-name {
+                margin-top: 0.5em;
+                color: #333;
+                font-size: 1em;
+                font-weight: bold;
+            }
+
+            .home-button {
                 display: inline-block;
                 margin-top: 1em;
                 padding: 10px 20px;
@@ -146,7 +157,20 @@ mysqli_close($conn);
             </section>
             <section id="products">
                 <h2>Our Products</h2>
-                <!-- Products can be displayed here using the same ID -->
+                <div class="product-wall">
+                    <?php 
+                    if (mysqli_num_rows($product_result) > 0) {
+                        while ($product = mysqli_fetch_assoc($product_result)) {
+                            echo '<a href="#">';
+                            echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
+                            echo '<p class="product-name">' . $product['name'] . '</p>';
+                            echo '</a>';
+                        }
+                    } else {
+                        echo '<p>No products available for this service group.</p>';
+                    }
+                    ?>
+                </div>
             </section>
         </main>
         <footer>
