@@ -23,14 +23,14 @@ header a:hover img {
     transform: scale(1.1);
 }
 
-/* Search*/
+/* Search */
 .search-form {
     display: inline-flex;
     align-items: center;
     margin-top: 10px;
 }
 
-.search-form input[type="text"] {
+#search-box {
     width: 200px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -39,7 +39,7 @@ header a:hover img {
     transition: border-color 0.3s ease;
 }
 
-.search-form input[type="text"]:focus {
+#search-box:focus {
     border-color: #9077B1;
     box-shadow: 0 0 5px rgba(144, 119, 177, 0.5);
 }
@@ -92,6 +92,11 @@ header a:hover img {
 .service-group-item a:hover, .product-item a:hover {
     color: #000;
     text-decoration: underline;
+}
+
+.error {
+    color: black;
+    padding: 10px;
 }
 
 /* Main*/
