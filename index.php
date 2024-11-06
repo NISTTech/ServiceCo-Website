@@ -23,8 +23,7 @@
                     $('.search-form').submit(function(event) {
                         event.preventDefault();
                         var searchTerm = $('#search-box').val().toLowerCase();
-
-                        if (searchTerm != '') {
+                        if (searchTerm) {
                             $.get('search.php', { search: searchTerm }, function(response) {
                                 $('#search-results').html(response).show();
                             }).fail(function() {
@@ -34,9 +33,8 @@
                             $('#search-results').hide();
                         }
                     });
-
                     $(document).click(function(e) {
-                        if (!$(e.target).is('#search-box') && !$(e.target).is('#search-results')) {
+                        if (!$(e.target).is('#search-box') && !$(e.target).closest('#search-results').length) {
                             $('#search-results').hide();
                         }
                     });
