@@ -14,9 +14,10 @@ CREATE TABLE products (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     service_group_id INT(11) NOT NULL,
     name VARCHAR(255) NOT NULL,
-    description TEXT,
     price DECIMAL(10, 2) NOT NULL,
-    image VARCHAR(255),
+    image VARCHAR(255) NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    description TEXT,
     FOREIGN KEY (service_group_id) REFERENCES service_groups(id) ON DELETE CASCADE
 );
 
@@ -59,10 +60,10 @@ INSERT INTO service_groups (name, email, color, logo, url, description) VALUES
 ('WOOF', 'woof@nist.ac.th','#769f57', 'http://localhost/serviceco/servicegroups/woof/logo.png', 'http://localhost/serviceco/servicegroups/woof/index.php', 'Welfare Of Our Friends (WOOF) is a service initiative that aims to raise awareness about issues regarding Soi Dogs in Thailand. We work alongside Soi Dog shelters and foundations to improve the livelihood of homeless, neglected and abused dogs in Thailand.');
 
 -- insert data into the products table
-INSERT INTO products (service_group_id, name, description, price, image) VALUES
+INSERT INTO products (service_group_id, name, price, image, url, description) VALUES
+(1, 'Product 1', 19.99, 'images/product1.jpg', '/product1', 'Description for product 1'),
+(1, 'Product 2', 29.99, 'images/product2.jpg', '/product2', 'Description for product 2'),
+(2, 'Product 3', 15.49, 'images/product3.jpg', '/product3', 'Description for product 3'),
+(2, 'Product 4', 49.99, 'images/product4.jpg', '/product4', 'Description for product 4'),
+(3, 'Product 5', 9.99, 'images/product5.jpg', '/product5', 'Description for product 5');
 -- examples (Replace with real products and prices.) 
-(1, 'Angel Bracelet', 'Handmade bracelet crafted with care and love.', 19.99, 'anglewishes/products/angel_bracelet.png'),
-(2, 'Luxe Candle', 'A luxury scented candle to set the mood.', 29.99, 'luxeproducts/products/luxe_candle.png'),
-(3, 'Fitness Tracker', 'A smart fitness tracker to monitor your health.', 49.99, 'fitgear/products/fitness_tracker.png'),
-(4, 'Reusable Water Bottle', 'An eco-friendly bottle for sustainable hydration.', 14.99, 'ecoessentials/products/reusable_water_bottle.png'),
-(5, 'Wireless Earbuds', 'High-quality wireless earbuds for your daily commute.', 39.99, 'techtrends/products/wireless_earbuds.png');
