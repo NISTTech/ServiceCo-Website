@@ -148,5 +148,6 @@ h2 {
 footer {
     text-align: center;
     padding: 1em 0;
-    background-color: #f1f1f1;
+    background-color: #333;
+    color: #fff;
 }
