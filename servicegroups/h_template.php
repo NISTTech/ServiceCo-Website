@@ -20,7 +20,14 @@ if ($result->num_rows > 0) {
     exit;
 }
 
-$product_result = $conn->query("SELECT * FROM products WHERE service_group_id = $serviceGroupId");
+// Pagination setup
+$productsPerPage = 8;
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$offset = ($page - 1) * $productsPerPage;
+
+$product_result = $conn->query("SELECT * FROM products WHERE service_group_id = $serviceGroupId LIMIT $productsPerPage OFFSET $offset");
+$total_products = $conn->query("SELECT COUNT(*) as total FROM products WHERE service_group_id = $serviceGroupId")->fetch_assoc()['total'];
+$total_pages = ceil($total_products / $productsPerPage);
 
 $conn->close();
 ?>
@@ -58,6 +65,7 @@ $conn->close();
 
             footer {
                 text-align: center;
+                padding: 1em 0;
             }
 
             main {
@@ -116,6 +124,26 @@ $conn->close();
                 color: #000;
             }
 
+            .pagination {
+                text-align: center;
+                margin-top: 1em;
+            }
+
+            .pagination a {
+                display: inline-block;
+                margin: 0 5px;
+                padding: 5px 10px;
+                background-color: <?php echo $groupColor; ?>;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 3px;
+                transition: background-color 0.3s ease;
+            }
+
+            .pagination a:hover {
+                background-color: #333;
+            }
+
             .home-button {
                 display: inline-block;
                 margin-top: 1em;
@@ -131,6 +159,13 @@ $conn->close();
             .home-button:hover {
                 background-color: #333;
                 transform: scale(1.05);
+            }
+
+            footer {
+                text-align: center;
+                padding: 1em 0;
+                background-color: #333;
+                color: #fff;
             }
         </style>
     </head>
@@ -153,14 +188,19 @@ $conn->close();
                     if ($product_result->num_rows > 0) {
                         while ($product = $product_result->fetch_assoc()) {
                             echo '<a href="#">';
-                            echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
-                            echo '<p class="product-name">' . $product['name'] . '</p>';
+                            echo '<img src="' . $product['image'] . '" alt="' . htmlspecialchars($product['name']) . '">';
+                            echo '<p class="product-name">' . htmlspecialchars($product['name']) . '</p>';
                             echo '</a>';
                         }
                     } else {
                         echo '<p class="no-products">No products available for this service group.</p>';
                     }
                     ?>
+                </div>
+                <div class="pagination">
+                    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                        <a href="?serviceGroupId=<?php echo $serviceGroupId; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                    <?php endfor; ?>
                 </div>
             </section>
         </main>
