@@ -20,7 +20,6 @@ if ($result->num_rows > 0) {
     exit;
 }
 
-// Pagination setup
 $productsPerPage = 8;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($page - 1) * $productsPerPage;
@@ -38,7 +37,7 @@ $conn->close();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="../../logo.png">
-        <title><?php echo $groupName; ?></title>
+        <title><?php echo htmlspecialchars($groupName); ?></title>
         <style>
             body {
                 font-family: 'Arial', sans-serif;
@@ -51,6 +50,7 @@ $conn->close();
                 background-color: <?php echo $groupColor; ?>;
                 padding: 1em 0;
                 text-align: center;
+                color: #fff;
             }
 
             header img {
@@ -63,9 +63,16 @@ $conn->close();
                 transform: scale(1.1);
             }
 
+            header a {
+                text-decoration: none;
+                color: #fff;
+            }
+
             footer {
                 text-align: center;
                 padding: 1em 0;
+                background-color: #333;
+                color: #fff;
             }
 
             main {
@@ -89,7 +96,7 @@ $conn->close();
 
             .product-wall {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                 gap: 20px;
                 margin-top: 2em;
             }
@@ -104,6 +111,8 @@ $conn->close();
                 max-width: 100%;
                 height: auto;
                 transition: transform 0.3s ease;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
 
             .product-wall a:hover img {
@@ -144,6 +153,11 @@ $conn->close();
                 background-color: #333;
             }
 
+            .pagination a.active {
+                background-color: #333;
+                font-weight: bold;
+            }
+
             .home-button {
                 display: inline-block;
                 margin-top: 1em;
@@ -160,26 +174,19 @@ $conn->close();
                 background-color: #333;
                 transform: scale(1.05);
             }
-
-            footer {
-                text-align: center;
-                padding: 1em 0;
-                background-color: #333;
-                color: #fff;
-            }
         </style>
     </head>
     <body>
         <header>
-            <a href="<?php echo $groupUrl; ?>"><img src="<?php echo $groupLogo; ?>" alt="<?php echo $groupName; ?> Logo"></a>
-            <h1>Welcome to <?php echo $groupName; ?></h1>
-            <p><?php echo $groupEmail; ?></p>
+            <a href="<?php echo htmlspecialchars($groupUrl); ?>"><img src="<?php echo htmlspecialchars($groupLogo); ?>" alt="<?php echo htmlspecialchars($groupName); ?> Logo"></a>
+            <h1>Welcome to <?php echo htmlspecialchars($groupName); ?></h1>
+            <p><a href="mailto:<?php echo htmlspecialchars($groupEmail); ?>"><?php echo htmlspecialchars($groupEmail); ?></a></p>
             <a href="http://localhost/ServiceCo/index.php" class="home-button">Back To ServiceCo</a>
         </header>
         <main>
             <section id="goals">
                 <h2>Our Goals</h2>
-                <p><?php echo $groupDescription; ?></p>
+                <p><?php echo htmlspecialchars($groupDescription); ?></p>
             </section>
             <section id="products">
                 <h2>Our Products</h2>
@@ -199,13 +206,13 @@ $conn->close();
                 </div>
                 <div class="pagination">
                     <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                        <a href="?serviceGroupId=<?php echo $serviceGroupId; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                        <a href="?serviceGroupId=<?php echo $serviceGroupId; ?>&page=<?php echo $i; ?>" class="<?php echo $page == $i ? 'active' : ''; ?>"><?php echo $i; ?></a>
                     <?php endfor; ?>
                 </div>
             </section>
         </main>
         <footer>
-            <p>2024 <?php echo $groupName; ?></p>
+            <p>2024 <?php echo htmlspecialchars($groupName); ?></p>
         </footer>
     </body>
 </html>
