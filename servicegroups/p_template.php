@@ -1,16 +1,12 @@
 <?php
-// Check if product ID is set
 if (!isset($_GET['productId'])) {
     die("Product ID not set.");
 }
 
-// Database connection
 $conn = new mysqli("localhost", "root", "", "serviceco");
 
-// Get the product ID from the URL
 $productId = (int)$_GET['productId'];
 
-// Fetch product details
 $product_result = $conn->query("SELECT * FROM products WHERE id = $productId");
 
 if ($product_result->num_rows > 0) {
@@ -26,7 +22,6 @@ if ($product_result->num_rows > 0) {
     exit;
 }
 
-// Fetch service group details based on the service group ID
 $service_group_result = $conn->query("SELECT * FROM service_groups WHERE id = $serviceGroupId");
 
 if ($service_group_result->num_rows > 0) {
@@ -51,7 +46,7 @@ $conn->close();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="../../logo.png">
-        <title><?php echo $productName; ?></title>
+        <title><?php echo htmlspecialchars($productName); ?></title>
         <style>
             body {
                 font-family: 'Arial', sans-serif;
@@ -64,6 +59,7 @@ $conn->close();
                 background-color: <?php echo $groupColor; ?>;
                 padding: 1em 0;
                 text-align: center;
+                color: #fff;
             }
 
             header img {
@@ -76,10 +72,9 @@ $conn->close();
                 transform: scale(1.1);
             }
 
-            header h1 {
+            header a {
+                text-decoration: none;
                 color: #fff;
-                margin: 0;
-                font-size: 1.8em;
             }
 
             footer {
@@ -90,90 +85,88 @@ $conn->close();
             }
 
             main {
-                display: flex;
-                max-width: 1200px;
-                margin: 2em auto;
                 padding: 2em;
-                background-color: #fff;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 1200px;
+                margin: 0 auto;
             }
 
-            .product-image img {
-                width: 100%;
-                max-width: 400px;
-                height: auto;
-                border-radius: 10px;
+            h1, h2 {
+                color: #000;
+            }
+
+            h2 {
+                border-bottom: 2px solid <?php echo $groupColor; ?>;
+                padding-bottom: 0.5em;
             }
 
             .product-details {
-                margin-left: 2em;
-                flex: 1;
+                display: flex;
+                align-items: flex-start;
+                gap: 2em;
+                margin-top: 2em;
             }
 
-            .product-details h2 {
-                color: <?php echo $groupColor; ?>;
-                margin-top: 0;
-            }
-
-            .product-price {
-                font-size: 1.5em;
-                font-weight: bold;
-                color: #27ae60;
+            .product-image img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
 
             .product-description {
-                margin: 1em 0;
                 font-size: 1.1em;
                 color: #333;
             }
 
-            .contact-info {
-                margin-top: 1em;
+            .contact-info a {
+                color: <?php echo $groupColor; ?>;
+                text-decoration: none;
                 font-weight: bold;
-                color: #555;
+                transition: color 0.3s ease;
             }
 
-            .back-button, .service-group-link {
+            .contact-info a:hover {
+                color: #333;
+            }
+
+            .home-button {
                 display: inline-block;
                 padding: 10px 20px;
                 background-color: <?php echo $groupColor; ?>;
                 color: #fff;
                 text-decoration: none;
                 border-radius: 5px;
-                margin-top: 1em;
+                font-weight: bold;
                 transition: background-color 0.3s ease, transform 0.3s ease;
             }
 
-            .back-button:hover, .service-group-link:hover {
+            .home-button:hover {
                 background-color: #333;
                 transform: scale(1.05);
-            }
-
-            .service-group-link {
-                margin-left: 1em;
             }
         </style>
     </head>
     <body>
         <header>
-            <a href="<?php echo $groupUrl; ?>"><img src="<?php echo $groupLogo; ?>" alt="<?php echo $groupName; ?> Logo"></a>
-            <h1><?php echo $groupName; ?></h1>
-            <a href="http://localhost/ServiceCo/index.php" class="back-button">Back to ServiceCo</a>
+            <a href="<?php echo htmlspecialchars($groupUrl); ?>"><img src="<?php echo htmlspecialchars($groupLogo); ?>" alt="<?php echo htmlspecialchars($groupName); ?> Logo"></a>
+            <h1><?php echo htmlspecialchars($groupName); ?></h1>
+            <a href="http://localhost/ServiceCo/index.php" class="home-button">Back To ServiceCo</a>
         </header>
         <main>
-            <div class="product-image">
-                <img src="<?php echo $productImage; ?>" alt="<?php echo $productName; ?> Image">
-            </div>
-            <div class="product-details">
-                <h2><?php echo $productName; ?></h2>
-                <p class="product-price">$<?php echo number_format($productPrice, 2); ?></p>
-                <p class="product-description"><?php echo nl2br($productDescription); ?></p>
-                <p class="contact-info">For more information or to purchase, contact: <a href="mailto:<?php echo $groupEmail; ?>"><?php echo $groupEmail; ?></a></p>
-            </div>
+            <section class="product-details">
+                <div class="product-image">
+                    <img src="<?php echo $productImage; ?>" alt="<?php echo htmlspecialchars($productName); ?>">
+                </div>
+                <div class="product-info">
+                    <h2><?php echo htmlspecialchars($productName); ?></h2>
+                    <p class="product-price">$<?php echo number_format($productPrice, 2); ?></p>
+                    <p class="product-description"><?php echo nl2br(htmlspecialchars($productDescription)); ?></p>
+                    <p class="contact-info">For more information, contact: <a href="mailto:<?php echo htmlspecialchars($groupEmail); ?>"><?php echo htmlspecialchars($groupEmail); ?></a></p>
+                </div>
+            </section>
         </main>
         <footer>
-            <p>2024 <?php echo $groupName; ?></p>
+            <p>2024 <?php echo htmlspecialchars($groupName); ?></p>
         </footer>
     </body>
 </html>

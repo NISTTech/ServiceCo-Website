@@ -160,7 +160,6 @@ $conn->close();
 
             .home-button {
                 display: inline-block;
-                margin-top: 1em;
                 padding: 10px 20px;
                 background-color: <?php echo $groupColor; ?>;
                 color: #fff;
