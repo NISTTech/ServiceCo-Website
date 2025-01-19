@@ -23,7 +23,7 @@ To set up the project locally, follow these steps:
     ```
 2. Install XMAPP (For macOS):
 
-    XAMPP version: 8.2.4 (installer found in "https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.2.4/xampp-osx-8.2.4-0-installer.dmg/download")
+   XAMPP version: 8.2.4 (installer found in "https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.2.4/xampp-osx-8.2.4-0-installer.dmg/download")
 
 3. Move the cloned repository to htdocs:
 
