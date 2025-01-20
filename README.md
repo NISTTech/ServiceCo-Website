@@ -28,8 +28,6 @@ To set up the project locally, follow these steps:
 3. Move the cloned repository to htdocs:
 
 
-
-
 ## Usage
 
-Once the server is running, you can access the website at `http://localhost/serviceco`.
+Once the server is running, you can access the website at `http://localhost/serviceco/index.php`.
