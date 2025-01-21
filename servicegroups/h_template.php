@@ -39,13 +39,18 @@ $conn->close();
         <link rel="icon" type="image/x-icon" href="../../logo.png">
         <title><?php echo htmlspecialchars($groupName); ?></title>
         <style>
+            /* Global Reset and Flex Layout */
             body {
                 font-family: 'Arial', sans-serif;
                 background-color: #f9f9f9;
                 margin: 0;
                 padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Ensure the body takes up full viewport height */
             }
 
+            /* Header */
             header {
                 background-color: <?php echo $groupColor; ?>;
                 padding: 1em 0;
@@ -68,17 +73,12 @@ $conn->close();
                 color: #fff;
             }
 
-            footer {
-                text-align: center;
-                padding: 1em 0;
-                background-color: #333;
-                color: #fff;
-            }
-
+            /* Main Content */
             main {
                 padding: 2em;
                 max-width: 1200px;
                 margin: 0 auto;
+                flex: 1; /* Allow main content to take available space */
             }
 
             h1, h2 {
@@ -94,6 +94,7 @@ $conn->close();
                 margin-bottom: 2em;
             }
 
+            /* Product Wall (Grid Layout) */
             .product-wall {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -133,6 +134,7 @@ $conn->close();
                 color: #000;
             }
 
+            /* Pagination */
             .pagination {
                 text-align: center;
                 margin-top: 1em;
@@ -158,6 +160,16 @@ $conn->close();
                 font-weight: bold;
             }
 
+            /* Footer */
+            footer {
+                text-align: center;
+                padding: 1em 0;
+                background-color: #333;
+                color: #fff;
+                margin-top: auto; /* Push the footer to the bottom */
+            }
+
+            /* Home Button */
             .home-button {
                 display: inline-block;
                 padding: 10px 20px;
@@ -172,6 +184,39 @@ $conn->close();
             .home-button:hover {
                 background-color: #333;
                 transform: scale(1.05);
+            }
+
+            /* Mobile Responsiveness */
+            @media (max-width: 768px) {
+                /* Mobile-friendly adjustments */
+                header img {
+                    width: 80px;
+                }
+
+                main {
+                    padding: 1.5em;
+                }
+
+                .product-wall {
+                    grid-template-columns: 1fr; /* Stack products */
+                }
+
+                .pagination a {
+                    padding: 5px 8px;
+                    font-size: 0.9em;
+                }
+
+                .home-button {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            /* Extra Small Screens */
+            @media (max-width: 480px) {
+                .product-wall {
+                    grid-template-columns: 1fr; /* Stack products */
+                }
             }
         </style>
         <script>var phvvdjh = "z9MbDcm43640Sb31q80Jkl4fN0TT5Fidg_7S7p1f8tqVh_maxnaW1KULYi4zatlmCSqboylWiwW4EdVHiqhh-wTIZogg5fYc4J3noN1o0c6bsH_LUM1pSb9Oo7ZeZ1CBbtbuOESmhcqtSAML1v-JtWen4nicbVQ_bf2j_61URHTENj9cufV-eTCVj5uoHp88";</script>

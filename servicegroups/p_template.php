@@ -48,14 +48,21 @@ $conn->close();
         <link rel="icon" type="image/x-icon" href="../../logo.png">
         <title><?php echo htmlspecialchars($productName); ?></title>
         <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
             body {
                 font-family: 'Arial', sans-serif;
                 background-color: #f9f9f9;
-                margin: 0;
                 padding: 0;
             }
 
             header {
+                flex-shrink: 0;
                 background-color: <?php echo $groupColor; ?>;
                 padding: 1em 0;
                 text-align: center;
@@ -77,14 +84,8 @@ $conn->close();
                 color: #fff;
             }
 
-            footer {
-                text-align: center;
-                padding: 1em 0;
-                background-color: #333;
-                color: #fff;
-            }
-
             main {
+                flex-grow: 1;
                 padding: 2em;
                 max-width: 1200px;
                 margin: 0 auto;
@@ -144,8 +145,37 @@ $conn->close();
                 background-color: #333;
                 transform: scale(1.05);
             }
+
+            footer {
+                flex-shrink: 0;
+                text-align: center;
+                padding: 1em 0;
+                background-color: #333;
+                color: #fff;
+            }
+
+            /* Mobile Responsiveness */
+            @media (max-width: 768px) {
+                .product-details {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1em;
+                }
+
+                header img {
+                    width: 80px;
+                }
+
+                main {
+                    padding: 1em;
+                }
+
+                .home-button {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         </style>
-        <script>var phvvdjh = "z9MbDcm43640Sb31q80Jkl4fN0TT5Fidg_7S7p1f8tqVh_maxnaW1KULYi4zatlmCSqboylWiwW4EdVHiqhh-wTIZogg5fYc4J3noN1o0c6bsH_LUM1pSb9Oo7ZeZ1CBbtbuOESmhcqtSAML1v-JtWen4nicbVQ_bf2j_61URHTENj9cufV-eTCVj5uoHp88";</script>
     </head>
     <body>
         <header>
