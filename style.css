@@ -4,9 +4,6 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Header */
@@ -14,9 +11,6 @@ header {
     background-color: #9077B1;
     padding: 1em 0;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 header img {
@@ -31,9 +25,8 @@ header a:hover img {
 
 /* Search */
 .search-form {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
     margin-top: 10px;
 }
 
@@ -107,12 +100,11 @@ header a:hover img {
     padding: 10px;
 }
 
-/* Main */
+/* Main*/
 main {
     padding: 2em;
     max-width: 1200px;
     margin: 0 auto;
-    flex-grow: 1; /* Ensure main takes up remaining space */
 }
 
 h1, h2 {
@@ -128,20 +120,18 @@ h2 {
     margin-bottom: 2em;
 }
 
-/* Logo Wall */
+/* Logo Wall*/
 .logo-wall {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 2em;
-    justify-content: space-around;
 }
 
 .logo-wall a {
     display: block;
     text-align: center;
     text-decoration: none;
-    flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis for responsiveness */
 }
 
 .logo-wall img {
@@ -154,33 +144,10 @@ h2 {
     transform: scale(1.1);
 }
 
-/* Footer */
+/* Footer*/
 footer {
     text-align: center;
     padding: 1em 0;
     background-color: #333;
     color: #fff;
-    margin-top: auto; /* Push the footer to the bottom */
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    #search-box {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .logo-wall {
-        justify-content: flex-start; /* Align logo wall items left */
-    }
-
-    .logo-wall a {
-        flex: 1 1 120px; /* Adjust flexibility for smaller screens */
-    }
-
-    #search-results {
-        width: 100%;
-        left: 0;
-        transform: none;
-    }
 }
