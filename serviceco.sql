@@ -61,9 +61,4 @@ INSERT INTO service_groups (name, email, color, logo, url, description) VALUES
 
 -- insert data into the products table
 INSERT INTO products (service_group_id, name, price, image, url, description) VALUES
--- Dummy products (Replace with real products and prices.) 
-(16, 'FIO Stickers', 19.99, 'images/product1.jpg', '/product1', 'Description for product 1'),
-(1, 'Product 2', 29.99, 'images/product2.jpg', '/product2', 'Description for product 2'),
-(2, 'Product 3', 15.49, 'images/product3.jpg', '/product3', 'Description for product 3'),
-(2, 'Product 4', 49.99, 'images/product4.jpg', '/product4', 'Description for product 4'),
-(3, 'Product 5', 9.99, 'images/product5.jpg', '/product5', 'Description for product 5');
+(16, 'FIO Stickers', 20, 'http://localhost/serviceco/servicegroups/friendsoftheimmanuleorchestra/images/product.png', 'http://localhost/ServiceCo/servicegroups/p_template.php?productId=1', 'Cute stickers that are festive, musical and adorable!');
