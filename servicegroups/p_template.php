@@ -190,7 +190,7 @@ $conn->close();
                 </div>
                 <div class="product-info">
                     <h2><?php echo htmlspecialchars($productName); ?></h2>
-                    <p class="product-price">$<?php echo number_format($productPrice, 2); ?></p>
+                    <p class="product-price">฿<?php echo number_format($productPrice, 2); ?></p>
                     <p class="product-description"><?php echo nl2br(htmlspecialchars($productDescription)); ?></p>
                     <p class="contact-info">For more information, contact: <a href="mailto:<?php echo htmlspecialchars($groupEmail); ?>"><?php echo htmlspecialchars($groupEmail); ?></a></p>
                 </div>
