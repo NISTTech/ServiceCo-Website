@@ -239,7 +239,7 @@ $conn->close();
                     <?php 
                     if ($product_result->num_rows > 0) {
                         while ($product = $product_result->fetch_assoc()) {
-                            echo '<a href="#">';
+                            echo '<a href="http://localhost/ServiceCo/servicegroups/p_template.php?productId=' . $product['id'] . '">';
                             echo '<img src="' . $product['image'] . '" alt="' . htmlspecialchars($product['name']) . '">';
                             echo '<p class="product-name">' . htmlspecialchars($product['name']) . '</p>';
                             echo '</a>';
