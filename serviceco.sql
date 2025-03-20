@@ -61,4 +61,6 @@ INSERT INTO service_groups (name, email, color, logo, url, description) VALUES
 
 -- insert data into the products table
 INSERT INTO products (service_group_id, name, price, image, url, description) VALUES
-(16, 'FIO Stickers', 20, 'http://localhost/serviceco/servicegroups/friendsoftheimmanuleorchestra/images/product.png', 'http://localhost/ServiceCo/servicegroups/p_template.php?productId=1', 'Cute stickers that are festive, musical and adorable!');
+(16, 'FIO Stickers', 20, 'http://localhost/serviceco/servicegroups/friendsoftheimmanuleorchestra/images/product1.png', 'http://localhost/ServiceCo/servicegroups/p_template.php?productId=1', 'Cute stickers that are festive, musical and adorable!'),
+(16, 'Custom Spotify Keychain', 120, 'http://localhost/serviceco/servicegroups/friendsoftheimmanuleorchestra/images/product2.png', 'http://localhost/ServiceCo/servicegroups/p_template.php?productId=2', 'Choose your own song/playlist and have on a keychain! You can scan on spotify to listen to your favourite songs!'),
+(16, 'Spotify Keychain', 100, 'http://localhost/serviceco/servicegroups/friendsoftheimmanuleorchestra/images/product3.png', 'http://localhost/ServiceCo/servicegroups/p_template.php?productId=3', 'Scan on spotify to listen to songs! (Not Customizable)');
