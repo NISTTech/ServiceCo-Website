@@ -8,7 +8,7 @@ The project runs on **Mac** using **XAMPP** as the local server and is managed w
 Before setting up the project, ensure you have the following installed:
 ### Apps:
 - [XAMPP for Mac](https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.2.4/xampp-osx-8.2.4-0-installer.dmg/download)
-- [GitHub Desktop](https://desktop.github.com/download/
+- [GitHub Desktop](https://desktop.github.com/download/)
 - [VS Code](https://code.visualstudio.com/download)
 
 Once these installers are downloaded, open the `Downloads` folder and open the installer, follow the steps inside the installer to install the apps:
