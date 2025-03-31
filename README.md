@@ -25,7 +25,7 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 3. Select **URL** and enter:
 
    ```
-   https://github.com/NISTTech/ServiceCo-Website.git
+   https://github.com/NISTTech/ServiceCo-Website
    ```
 
 4. Choose a local folder (e.g., `~/Documents/GitHub/ServiceCo-Website`).
@@ -39,7 +39,7 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 2. Move the cloned project to the XAMPP `htdocs` folder:
 
    ```sh
-   mv ~/Documents/GitHub/ServiceCo-Website /Applications/XAMPP/htdocs/
+   mv ~/Documents/GitHub/ServiceCo-Website /Applications/XAMPP/xamppfiles/htdocs
    ```
 
 3. Open the project in a browser:
@@ -89,9 +89,11 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 - **Database errors?**  
   Check database credentials in `config.php`.
 - **Changes not showing?**  
-  Clear browser cache or restart Apache.
+  Clear browser cache or restart Apache. (Or you can just use incognito mode.)
 
 ## Contributors
+
+NISTTech team
 
 - [uqnquvwfkq](#)
 - [joon0987](#)
@@ -99,5 +101,3 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 - [codexplor](#)
 
 ---
-
-© 2025 ServiceCo. All rights reserved.
