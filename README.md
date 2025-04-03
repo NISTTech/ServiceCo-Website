@@ -11,10 +11,7 @@ Before setting up the project, ensure you have the following installed:
 - [GitHub Desktop](https://desktop.github.com/download/)
 - [VS Code](https://code.visualstudio.com/download)
 
-Once these installers are downloaded, open the `Downloads` folder and open the installer, follow the steps inside the installer to install the apps:
-
-### Git:
-
+Once these installers are downloaded, open the `Downloads` folder and open the installer, follow the steps inside the installer to install the apps
 
 ## Installation & Setup
 
@@ -33,10 +30,10 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 
 ### 2. Set Up XAMPP
 
-1. Open **XAMPP** and start:
+1. Open **XAMPP** from your launch pad (Inside launchpad it is called `manager-osx`)and start:
    - **Apache** (for PHP & web server)
    - **MySQL** (for database)
-2. Move the cloned project to the XAMPP `htdocs` folder:
+2. Move the cloned project to the XAMPP `htdocs` folder (This is using terminal alternatively you can just open the `/Applications/XAMPP/xamppfiles/htdocs` folder and simply drag and drop the cloned folder inside `htdocs`):
 
    ```sh
    mv ~/Documents/GitHub/ServiceCo-Website /Applications/XAMPP/xamppfiles/htdocs
