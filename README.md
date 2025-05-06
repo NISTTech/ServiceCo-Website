@@ -83,8 +83,6 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 
 - **Port 80 in use?**  
   Change Apache’s port in `httpd.conf` (e.g., `Listen 8080`).
-- **Database errors?**  
-  Check database credentials in `config.php`.
 - **Changes not showing?**  
   Clear browser cache or restart Apache. (Or you can just use incognito mode.)
 
@@ -92,9 +90,9 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 
 NISTTech team
 
-- [uqnquvwfkq](#)
-- [joon0987](#)
-- [Jiyeon118](#)
-- [codexplor](#)
+- [uqnquvwfkq](https://github.com/uqnquvwfkq)
+- [joon0987](https://github.com/joon0987)
+- [Jiyeon118](https://github.com/Jiyeon118)
+- [codexplor](https://github.com/codexplor)
 
 ---
