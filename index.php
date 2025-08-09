@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <a href="http://localhost/ServiceCo/"><img src="./logo.png" alt="serviceco Logo"></a>
+            <a href="./ServiceCo"><img src="./logo.png" alt="serviceco Logo"></a>
             <h1>Welcome to ServiceCo</h1>
             <form action="#" method="GET" class="search-form">
                 <input type="text" id="search-box" placeholder="Search in ServiceCo" autocomplete="off">
