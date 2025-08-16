@@ -84,7 +84,7 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 - **Port 80 in use?**  
   Change Apache’s port in `httpd.conf` (e.g., `Listen 8080`).
 - **Changes not showing?**  
-  Clear browser cache or restart Apache. (Or you can just use incognito mode.)
+  Clear browser cache or restart Apache. (Or you can just use incognito mode and see if that works.)
 
 ## Contributors
 
@@ -96,3 +96,4 @@ NISTTech team
 - [codexplor](https://github.com/codexplor)
 
 ---
+
