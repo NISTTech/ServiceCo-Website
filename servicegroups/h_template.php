@@ -226,7 +226,7 @@ $conn->close();
             <a href="<?php echo htmlspecialchars($groupUrl); ?>"><img src="<?php echo htmlspecialchars($groupLogo); ?>" alt="<?php echo htmlspecialchars($groupName); ?> Logo"></a>
             <h1>Welcome to <?php echo htmlspecialchars($groupName); ?></h1>
             <p><a href="mailto:<?php echo htmlspecialchars($groupEmail); ?>"><?php echo htmlspecialchars($groupEmail); ?></a></p>
-            <a href="http://localhost/ServiceCo/index.php" class="home-button">Back To ServiceCo</a>
+            <a href="../../index.php" class="home-button">Back To ServiceCo</a>
         </header>
         <main>
             <section id="goals">
@@ -239,7 +239,7 @@ $conn->close();
                     <?php 
                     if ($product_result->num_rows > 0) {
                         while ($product = $product_result->fetch_assoc()) {
-                            echo '<a href="http://localhost/ServiceCo/servicegroups/p_template.php?productId=' . $product['id'] . '">';
+                            echo '<a href="../p_template.php?productId=' . (int)$product['id'] . '">';
                             echo '<img src="' . $product['image'] . '" alt="' . htmlspecialchars($product['name']) . '">';
                             echo '<p class="product-name">' . htmlspecialchars($product['name']) . '</p>';
                             echo '</a>';

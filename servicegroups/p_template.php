@@ -32,6 +32,7 @@ if ($service_group_result->num_rows > 0) {
     $groupColor = $service_group['color'];
     $groupUrl = $service_group['url'];
     $groupDescription = $service_group['description'];
+    $groupFolder = $service_group['folder']; // ✅ folder column
 } else {
     echo "Service group not found.";
     exit;
@@ -179,14 +180,19 @@ $conn->close();
     </head>
     <body>
         <header>
-            <a href="<?php echo htmlspecialchars($groupUrl); ?>"><img src="<?php echo htmlspecialchars($groupLogo); ?>" alt="<?php echo htmlspecialchars($groupName); ?> Logo"></a>
+            <!-- Logo links to the service group's homepage -->
+            <a href="<?php echo htmlspecialchars($groupFolder . '/index.php'); ?>">
+                <img src="<?php echo htmlspecialchars($groupFolder . '/' . $groupLogo); ?>" 
+                    alt="<?php echo htmlspecialchars($groupName); ?> Logo">
+            </a>
             <h1><?php echo htmlspecialchars($groupName); ?></h1>
-            <a href="http://localhost/ServiceCo/index.php" class="home-button">Back To ServiceCo</a>
+            <a href="../index.php" class="home-button">Back To ServiceCo</a>
         </header>
         <main>
             <section class="product-details">
                 <div class="product-image">
-                    <img src="<?php echo $productImage; ?>" alt="<?php echo htmlspecialchars($productName); ?>">
+                    <img src="<?php echo htmlspecialchars($groupFolder . '/' . $productImage); ?>" 
+                         alt="<?php echo htmlspecialchars($productName); ?>">
                 </div>
                 <div class="product-info">
                     <h2><?php echo htmlspecialchars($productName); ?></h2>
