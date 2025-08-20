@@ -32,7 +32,7 @@ if ($service_group_result->num_rows > 0) {
     $groupColor = $service_group['color'];
     $groupUrl = $service_group['url'];
     $groupDescription = $service_group['description'];
-    $groupFolder = $service_group['folder']; // ✅ folder column
+    $groupFolder = $service_group['folder'];
 } else {
     echo "Service group not found.";
     exit;
