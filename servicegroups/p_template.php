@@ -180,7 +180,6 @@ $conn->close();
     </head>
     <body>
         <header>
-            <!-- Logo links to the service group's homepage -->
             <a href="<?php echo htmlspecialchars($groupFolder . '/index.php'); ?>">
                 <img src="<?php echo htmlspecialchars($groupFolder . '/' . $groupLogo); ?>" 
                     alt="<?php echo htmlspecialchars($groupName); ?> Logo">
