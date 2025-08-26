@@ -3,7 +3,7 @@ if (!isset($_GET['productId'])) {
     die("Product ID not set.");
 }
 
-$conn = new mysqli("localhost", "root", "", "serviceco");
+include "../config.php";
 
 $productId = (int)$_GET['productId'];
 
@@ -198,7 +198,7 @@ $conn->close();
                     <h2><?php echo htmlspecialchars($productName); ?></h2>
                     <p class="product-price">฿<?php echo number_format($productPrice, 2); ?></p>
                     <p class="product-description"><?php echo nl2br(htmlspecialchars($productDescription)); ?></p>
-                    <p class="contact-info">For more information, contact: <a href="mailto:<?php echo htmlspecialchars($groupEmail); ?>"><?php echo htmlspecialchars($groupEmail); ?></a></p>
+                    <p class="contact-info">For more information such as purchase, contact: <a href="mailto:<?php echo htmlspecialchars($groupEmail); ?>"><?php echo htmlspecialchars($groupEmail); ?></a></p>
                 </div>
             </section>
         </main>

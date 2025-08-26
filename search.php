@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "serviceco");
+include "config.php";
 
 $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
 
@@ -11,7 +11,7 @@ $results = [];
 if ($resultServiceGroup->num_rows > 0) {
     $results[] = "<div class='results-header'>Service Groups:</div>";
     while ($sgRow = $resultServiceGroup->fetch_assoc()) {
-        $results[] = "<div class='service-group-item'><a href='" . $sgRow['url'] . "'>" . $sgRow['name'] . "</a></div>";
+        $results[] = "<div class='service-group-item'><a href='servicegroups/" . $sgRow['folder'] . "'>" . $sgRow['name'] . "</a></div>";
     }
 } else {
     $results[] = "<div class='error'>No service groups found.</div>";
@@ -20,7 +20,7 @@ if ($resultServiceGroup->num_rows > 0) {
 if ($resultProducts->num_rows > 0) {
     $results[] = "<div class='results-header'>Products:</div>";
     while ($productRow = $resultProducts->fetch_assoc()) {
-        $results[] = "<div class='product-item'><a href='http://localhost/ServiceCo/servicegroups/p_template.php?productId=" . $productRow['id'] . "'>" . $productRow['name'] . "</a></div>";
+        $results[] = "<div class='product-item'><a href='./servicegroups/p_template.php?productId=" . $productRow['id'] . "'>" . $productRow['name'] . "</a></div>";
     }
 } else {
     $results[] = "<div class='error'>No products found.</div>";

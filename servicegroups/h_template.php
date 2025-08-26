@@ -3,7 +3,7 @@ if (!isset($serviceGroupId)) {
     die("Service group ID not set.");
 }
 
-$conn = new mysqli("localhost", "root", "", "serviceco");
+include "../../config.php";
 
 $result = $conn->query("SELECT * FROM service_groups WHERE id = $serviceGroupId");
 
