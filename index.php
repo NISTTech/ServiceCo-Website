@@ -14,7 +14,7 @@
             <a href="./index.php">
                 <img src="./logo.png" alt="ServiceCo Logo">
             </a>
-            <h1>Welcome to Service Shop</h1>
+            <h1>Welcome to Service Product Catalog</h1>
             <form action="#" method="GET" class="search-form">
                 <input type="text" id="search-box" placeholder="Search in ServiceCo" autocomplete="off">
                 <button type="submit">Search</button>
