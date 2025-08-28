@@ -11,7 +11,7 @@ $results = [];
 if ($resultServiceGroup->num_rows > 0) {
     $results[] = "<div class='results-header'>Service Groups:</div>";
     while ($sgRow = $resultServiceGroup->fetch_assoc()) {
-        $results[] = "<div class='service-group-item'><a href='servicegroups/" . $sgRow['folder'] . "'>" . $sgRow['name'] . "</a></div>";
+        $results[] = "<div class='service-group-item'><a href='servicegroups/" . $sgRow['folder'] . "/index.php'>" . $sgRow['name'] . "</a></div>";
     }
 } else {
     $results[] = "<div class='error'>No service groups found.</div>";
