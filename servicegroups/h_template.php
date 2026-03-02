@@ -257,7 +257,7 @@ $conn->close();
             </section>
         </main>
         <footer>
-            <p>2025 <?php echo htmlspecialchars($groupName); ?></p>
+            <p>2026 <?php echo htmlspecialchars($groupName); ?></p>
         </footer>
     </body>
 </html>
