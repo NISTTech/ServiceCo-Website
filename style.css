@@ -146,6 +146,90 @@ h2 {
     transform: scale(1.1);
 }
 
+/* ============================================================= */
+
+/* Dropdown Red */
+.red-dropdown {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.red-dropdown summary {
+    cursor: pointer;
+    padding: 12px;
+    background: #c2593a;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.red-dropdown a {
+    background: #f5f5f5;
+    padding: 15px;
+}
+
+/* Dropdown Blue */
+.blue-dropdown {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.blue-dropdown summary {
+    cursor: pointer;
+    padding: 12px;
+    background: #435ba6;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.red-dropdown a {
+    background: #f5f5f5;
+    padding: 15px;
+}
+
+/* Dropdown Yellow */
+.yellow-dropdown {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.yellow-dropdown summary {
+    cursor: pointer;
+    padding: 12px;
+    background: #bf8d42;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.yellow-dropdown a {
+    background: #f5f5f5;
+    padding: 15px;
+}
+
+/* Dropdown Green */
+.green-dropdown {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.green-dropdown summary {
+    cursor: pointer;
+    padding: 12px;
+    background: #769f57;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.green-dropdown a {
+    background: #f5f5f5;
+    padding: 15px;
+}
+
+/* ============================================================= */
+
 /* Footer*/
 footer {
     text-align: center;
