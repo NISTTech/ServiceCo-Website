@@ -51,7 +51,38 @@
             </section>
             <section id="service-groups">
                 <h2>Service Groups</h2>
-                <div class="logo-wall">
+                    <!-- Dropdown Red -->
+                    <details class="red-dropdown">
+                        <summary>Red</summary>
+                        <div class="logo-wall">
+                            
+                        </div>
+                    </details>
+
+                    <!-- Dropdown Blue -->
+                    <details class="blue-dropdown">
+                        <summary>Blue</summary>
+                        <div class="logo-wall">
+                            
+                        </div>
+                    </details>
+
+                    <!-- Dropdown Yellow -->
+                    <details class="yellow-dropdown">
+                        <summary>Yellow</summary>
+                        <div class="logo-wall">
+                            
+                        </div>
+                    </details>
+
+                    <!-- Dropdown Green -->
+                    <details class="green-dropdown">
+                        <summary>Green</summary>
+                        <div class="logo-wall">
+                            
+                        </div>
+                    </details>
+
                     <a href="./servicegroups/anglewishes/index.php"><img src="./servicegroups/anglewishes/logo.png" alt="anglewishes Logo"></a>
                     <a href="./servicegroups/arc/index.php"><img src="./servicegroups/arc/logo.png" alt="arc Logo"></a>
                     <a href="./servicegroups/baansaijai/index.php"><img src="./servicegroups/baansaijai/logo.png" alt="baansaijai Logo"></a>
@@ -87,7 +118,6 @@
                     <a href="./servicegroups/wellnist/index.php"><img src="./servicegroups/wellnist/logo.png" alt="wellnist Logo"></a>
                     <a href="./servicegroups/wishtogether/index.php"><img src="./servicegroups/wishtogether/logo.png" alt="wishtogether Logo"></a>
                     <a href="./servicegroups/woof/index.php"><img src="./servicegroups/woof/logo.png" alt="woof Logo"></a>
-                </div>
             </section>
         </main>
         <footer>
