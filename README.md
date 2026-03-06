@@ -88,9 +88,8 @@ Once these installers are downloaded, open the `Downloads` folder and open the i
 
 ## Contributors
 
-NISTTech team
-
 - [uqnquvwfkq](https://github.com/uqnquvwfkq)
+- [hviegelahn-collab] (https://github.com/hviegelahn-collab)
 - [joon0987](https://github.com/joon0987)
 - [Jiyeon118](https://github.com/Jiyeon118)
 - [codexplor](https://github.com/codexplor)
