@@ -25,6 +25,54 @@ header a:hover img {
     transform: scale(1.1);
 }
 
+/* Side nav bar */
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* sidebar overlay */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -25vw; /* move same amount as width */
+    width: 25vw;
+    max-width: 250px;
+    min-width: 160px;
+
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* side bar links */
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #4e4e4e;
+}
+
+.sidebar a:hover {
+    background: #f5f5f5;
+}
+
+/* side bar open state */
+.sidebar.open {
+    right: 0;
+}
+
+
 /* Search */
 .search-form {
     display: inline-flex;
@@ -122,6 +170,26 @@ h2 {
     margin-bottom: 2em;
 }
 
+/* Group Color Dropdown */
+.group-color-dropdown {
+    max-width: 1100px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.group-color-dropdown summary {
+    cursor: pointer;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.group-color-dropdown a {
+    background: #f5f5f5;
+    padding: 15px;
+}
+
 /* Logo Wall*/
 .logo-wall {
     display: grid;
@@ -145,90 +213,6 @@ h2 {
 .logo-wall a:hover img {
     transform: scale(1.1);
 }
-
-/* ============================================================= */
-
-/* Dropdown Red */
-.red-dropdown {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-.red-dropdown summary {
-    cursor: pointer;
-    padding: 12px;
-    background: #c2593a;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-.red-dropdown a {
-    background: #f5f5f5;
-    padding: 15px;
-}
-
-/* Dropdown Blue */
-.blue-dropdown {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-.blue-dropdown summary {
-    cursor: pointer;
-    padding: 12px;
-    background: #435ba6;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-.red-dropdown a {
-    background: #f5f5f5;
-    padding: 15px;
-}
-
-/* Dropdown Yellow */
-.yellow-dropdown {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-.yellow-dropdown summary {
-    cursor: pointer;
-    padding: 12px;
-    background: #bf8d42;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-.yellow-dropdown a {
-    background: #f5f5f5;
-    padding: 15px;
-}
-
-/* Dropdown Green */
-.green-dropdown {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-.green-dropdown summary {
-    cursor: pointer;
-    padding: 12px;
-    background: #769f57;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-.green-dropdown a {
-    background: #f5f5f5;
-    padding: 15px;
-}
-
-/* ============================================================= */
 
 /* Footer*/
 footer {
