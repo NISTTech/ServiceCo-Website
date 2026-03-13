@@ -40,9 +40,9 @@ $conn->close();
             <div class="group-menu">
                 <div class="menu-icon" onclick="toggleMenu()">☰</div>
                 <div id="sidebar" class="sidebar">
-                <?php foreach ($groups as $grp): ?>
-                    <a href="./servicegroups/<?php echo htmlspecialchars($grp['folder']); ?>/index.php"><?php echo htmlspecialchars($grp['name']); ?></a>
-                <?php endforeach; ?>
+                    <?php foreach ($groups as $grp): ?>
+                        <a href="./servicegroups/<?php echo htmlspecialchars($grp['folder']); ?>/index.php"><?php echo htmlspecialchars($grp['name']); ?></a>
+                    <?php endforeach; ?>
                 </div>
                 <script>
                     function toggleMenu() {
