@@ -36,7 +36,7 @@ header a:hover img {
 }
 
 /* sidebar overlay */
-.sidebar {
+.sidebar-content {
     position: fixed;
     top: 0;
     right: -25vw; /* move same amount as width */
@@ -55,7 +55,7 @@ header a:hover img {
 }
 
 /* side bar links */
-.sidebar a {
+.sidebar-content a {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
@@ -63,12 +63,12 @@ header a:hover img {
     color: #4e4e4e;
 }
 
-.sidebar a:hover {
+.sidebar-content a:hover {
     background: #f5f5f5;
 }
 
 /* side bar open state */
-.sidebar.open {
+.sidebar-content.open {
     right: 0;
 }
 

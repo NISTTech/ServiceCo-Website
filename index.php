@@ -37,21 +37,21 @@ $conn->close();
                 <img src="./logo.png" alt="ServiceCo Logo">
             </a>
             <h1>Welcome to Service Product Catalog</h1>
-            <div class="group-menu">
+            <div class="sidebar">
                 <div class="menu-icon" onclick="toggleMenu()">☰</div>
-                <div id="sidebar" class="sidebar">
+                <div id="sidebar-content" class="sidebar-content">
                     <?php foreach ($groups as $grp): ?>
                         <a href="./servicegroups/<?php echo htmlspecialchars($grp['folder']); ?>/index.php"><?php echo htmlspecialchars($grp['name']); ?></a>
                     <?php endforeach; ?>
                 </div>
                 <script>
                     function toggleMenu() {
-                        document.getElementById("sidebar").classList.toggle("open");
+                        document.getElementById("sidebar-content").classList.toggle("open");
                     }
 
                     addEventListener('click', function(event){
-                        if (!event.target.closest('.group-menu')) {
-                            document.getElementById("sidebar").classList.remove("open");
+                        if (!event.target.closest('.sidebar')) {
+                            document.getElementById("sidebar-content").classList.remove("open");
                         }
                     });
                 </script>
