@@ -85,7 +85,7 @@ $conn->close();
             </script>
         </header>
         <main>
-            <section id="goals">
+            <section class="goals">
                 <h2>Our Goals</h2>
                 <p>An overview of sustainable and service products with their pricing and contact details supporting and strengthening our community partnership.</p>
                 <img src="sdg.png" alt="SDG" style="max-width: 100%; height: auto;">
